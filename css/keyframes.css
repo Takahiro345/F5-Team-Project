@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+/*scale1（メニューが大きく広がって基準サイズに戻る）
+---------------------------------------------------------------------------*/
+@keyframes scale1 {
+	0% {transform: scale(0);}
+	50% {transform: scale(2);}
+	100% {transform: scale(1);}
+}
+
+/*rotate1（左右にスイング）
+---------------------------------------------------------------------------*/
+@keyframes rotate1 {
+	0% {transform: rotate(0deg);}
+	30% {transform: rotate(-10deg);}
+	80% {transform: rotate(10deg);}
+	100% {transform: rotate(0deg);}
+}
+
+/*opa1（透明から着色状態に）
+---------------------------------------------------------------------------*/
+@keyframes opa1 {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+/*opa2（透明から着色状態に＆下からフェードイン）
+---------------------------------------------------------------------------*/
+@keyframes opa2 {
+	0% {opacity: 0;top: 20px;}
+	100% {opacity: 1;top: 0px;}
+}
+
+/*スライドショーのフレーム設定
+---------------------------------------------------------------------------*/
+@keyframes slide1 {
+	0% {opacity: 0;transform: scale(1);}
+	10% {opacity: 0;}
+	20% {opacity: 1;}
+	50% {opacity: 1;}
+	60% {opacity: 0;}
+	100% {opacity: 0;transform: scale(1.1);}
+}
+@keyframes slide2 {
+	0% {opacity: 0;transform: scale(1);}
+	35% {opacity: 0;}
+	45% {opacity: 1;}
+	72% {opacity: 1;}
+	82% {opacity: 0;}
+	100% {opacity: 0;transform: scale(1.1);}
+}
+@keyframes slide3 {
+	0% {opacity: 0;transform: scale(1);}
+	58% {opacity: 0;}
+	68% {opacity: 1;}
+	83% {opacity: 1;}
+	93% {opacity: 0;}
+	100% {opacity: 0;transform: scale(1.1);}
+}
