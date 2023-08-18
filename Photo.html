@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" constent="IE=edge">
+<title>Photo </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<style>
+
+.total {
+  padding-top: 15%;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#gallery {
+  margin-top: -100px;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+#gallery img {
+  width: 29%;
+  margin-right: 6.5%;
+
+  display: inline-block;
+  transition: left 0.4s ease;
+  position: relative;
+}
+
+#gallery-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+.images {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#main button {
+  border-style: none;
+  background: none;
+  font-size: 40px;
+  color: #ecc102;
+}
+
+body {
+  background: #f8f4d2 url(images/bg5.png) no-repeat center top / 100%;
+}
+
+#main {
+  height: 100vh;
+}
+
+#header {
+  left: -180px;
+}
+
+#left-button {
+  padding-right: 2%;
+}
+
+#right-button {
+  padding-left: 2%;
+}
+
+@media screen and (max-width:900px) {
+
+  #gallery-button {
+    display: none;
+  }
+
+  #gallery img {
+    width: 90%;
+    margin-right: 10%;
+  }
+
+  #left-button {
+    padding-right: 15%;
+  }
+
+  #right-button {
+    padding-left: 10%;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  #gallery img {
+    width: 100%;
+    margin-right: 0%;
+  }
+  #left-button {
+    padding-right: 3%;
+  }
+
+  #right-button {
+    padding-left: 3%;
+  }
+}
+
+</style>
+<body>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<button id="logo2"><img src="images/logo1.png" alt="" width="110px" height="110px"></button>
+
+<header id="header" style="background-color: #FFD000;">
+  <!--PC用（901px以上端末）メニュー-->
+
+  <nav id="menubar">
+      <ul>
+        <li class="menu-a"><a href="Home.html"><span>Home</span><span></span></a></li> <hr>
+        <li id="Team" class="menu-a"><a href="Team.html"><span>Team</span><span>紹介</span></a></li> <hr>
+        <li id="I1" class="menu-a"><a href="Interview1.html"><span>Interview 1</span><span>納 由貴子 様</span></a></li> <hr>
+        <li id="I2" class="menu-a"><a href="Interview2.html"><span>Interview 2</span><span>キム・ミンジュン 様</span></a></li> <hr>
+        <li id="Photo" class="menu-a"><a href="Photo.html"><span>Photo</span><span></span></a></li>
+      </ul>
+  </nav>
+</header>
+
+<!--小さな端末用（900px以下端末）ブロック-->
+<nav id="menubar-s">
+  <ul>
+    <li><a href="Home.html"><span>Home</span><span></span></a></li>
+    <li><a href="Team.html"><span>Team</span><span>紹介</span></a></li>
+    <li><a href="Interview1.html"><span>Interview 1</span><span>納 由貴子 様</span></a></li>
+    <li><a href="Interview2.html"><span>Interview 2</span><span>キム・ミンジュン 様</span></a></li>
+    <li><a href="Photo.html"><span>Photo</span><span></span></a></li>
+  </ul>
+</nav>
+
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<div id="main">
+<div class="total">
+
+  <div id="gallery">
+    <button id="left-button">◀</button>
+    <div class="images">
+      <img class="image" src="images/포토/1.png" alt="">
+      <img class="image" src="images/포토/2.png" alt="">
+      <img class="image" src="images/포토/3.png" alt="">
+      <img class="image" src="images/포토/4.png" alt="">
+      <img class="image" src="images/포토/5.png" alt="">
+      <img class="image" src="images/포토/6.png" alt="">
+      <img class="image" src="images/포토/7.png" alt="">
+      <img class="image" src="images/포토/8.png" alt="">
+      <img class="image" src="images/포토/9.png" alt="">
+    </div>    
+    <button id="right-button">▶</button>
+  </div>
+
+  <div id="gallery-button">
+    <button class="but" data-index="0" style="color: #c0b083;">●</button>
+    <button class="but" data-index="1">●</button>
+    <button class="but" data-index="2">●</button>
+    <button class="but" data-index="3">●</button>
+    <button class="but" data-index="4">●</button>
+    <button class="but" data-index="5">●</button>
+    <button class="but" data-index="6">●</button>
+  </div>
+
+</div><!--/#total-->
+</div><!--/#main-->
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+
+<!--メニューの開閉処理-->
+<script>
+open_close("menubar_hdr", "menubar-s");
+</script>
+<script src="js/main.js"></script>
+<script src="js/Photo.js"></script>
+
+</body>
+</html>

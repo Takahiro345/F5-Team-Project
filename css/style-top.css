@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+
+/*keyframes.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url("keyframes.css");
+
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body {height: 100%;width: 100%;overflow: hidden;}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #000000;	/*全体の文字色*/
+	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 16px;	/*文字サイズ*/
+	line-height: 2;		/*行間*/
+	background: #000000;	/*背景色*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,select,textarea,input {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+a {text-decoration: none;color: #666;transition: 0.5s;}
+
+#mainimg {
+	clear: left;
+	text-indent: -9999px;
+	position: fixed;
+	top: 0px;left: 0px;
+	width: 250%;
+	height: 100%;
+	z-index: -1;
+}
+/*土台画像*/
+
+---------------------------------------------------------------------------*/
+/*ヘッダーブロック*/
+
+/*「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+/*ブロック*/
+#new {
+	height: 100px;	/*高さ*/
+	overflow: auto;	/*高さを超えたコンテンツになった場合にスクロールバーを出す*/
+}
+/*日付設定*/
+#new dt {
+	float: left;
+	width: 8em;		/*幅*/
+	color: #fff;;	/*文字色*/
+	letter-spacing: 0.1em;
+}
+/*記事設定*/
+#new dd {
+	padding-left: 8em;
+}
+
+/*メインメニュー
+---------------------------------------------------------------------------*/
+/*メニュー１個あたりの設定*/
+#menubar li {
+	animation-name: scale1;		
+	animation-fill-mode: both;
+	animation-duration: 1S;		
+	opacity: 1;	
+	position: absolute;
+}
+
+#menubar li a {
+	display: block;
+	text-decoration: none;
+	color: #000000; 
+	text-align: center; 
+	width: 300px;
+	line-height: 200px; 
+    font-size: 0;
+    transform: scale(1);
+}
+
+/*１つ目のspanタグ（英語）への設定. 마우스를 올리지 않았을 때만 보이도록 설정합니다.*/
+#menubar li span:first-child {display: block;}
+#menubar li:hover span:first-child {display: block;}
+
+/*２つ目のspanタグ（日本語）への設定. 마우스를 올렸을 때만 보이도록 설정합니다.*/
+#menubar li span:last-child {display: none;}
+#menubar li:hover span:last-child {display: none;}
+
+#menubar li:nth-of-type(1) {
+	animation-delay: 1s;
+	left: 12%;
+	bottom: 42%;
+}
+#menubar li:nth-of-type(1) a {
+	background: url(../images/menu1.png) no-repeat center center / contain;
+}
+
+
+#menubar li:nth-of-type(2) {
+	animation-delay: 1.2s;
+	left: 32%;	
+	bottom: 42%;
+}
+#menubar li:nth-of-type(2) a {
+	background: url(../images/menu2.png) no-repeat center center / contain;
+	animation-delay: 1s;
+}
+
+#menubar li:nth-of-type(3) {
+	animation-delay: 1.4s;
+	left : 52%; 
+	bottom: 42%; 
+}
+#menubar li:nth-of-type(3) a {
+	background: url(../images/menu3.png) no-repeat center center / contain;
+	animation-delay: 1s;
+}
+
+#menubar li:nth-of-type(4) {
+	animation-delay: 1.6s;
+	left : 72%;
+	bottom: 42%;
+}
+#menubar li:nth-of-type(4) a {
+	background: url(../images/menu4.png) no-repeat center center / contain;
+	animation-delay: 1s;	
+}
+
+
+/*マウスオン時*/
+#menubar li a:hover {	/*マウスオン時にちょっとだけ大きくする。通常サイズは上の「#menubar li a」で指定しています。*/
+	animation-play-state: paused;	/*マウスオン時に一時停止する*/
+              transform: scale(1.2);
+}
+#menubar li:hover {
+	opacity: 1;/*色を100%出す*/
+
+}
+
+/*画面幅900px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:900px){
+
+#menubar li a {
+	transform: scale(0.6);
+}
+
+#menubar li a :hover {
+	transform: scale(0.8);
+}
+
+}
+
+
+
+@media screen and (orientation:portrait) and (max-width:600px){
+
+}

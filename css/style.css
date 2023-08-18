@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+
+/*keyframes.cssの読み込み
+---------------------------------------------------------------------------*/
+@import url("keyframes.css");
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Noto Sans CJK KR", sans-serif;  /* 폰트종류 "Yu Gothic"  "Noto Sans CJK KR" */
+	line-height: 2;		/* 행간 조정하는 코드 */
+	background: #fcf9de url(../images/bg1.png) no-repeat center top / 100%;  /* 배경 이미지 */
+}
+
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+video {max-width: 100%;}
+iframe {width: 100%;}
+
+/*전반적인 링크 설정
+---------------------------------------------------------------------------*/
+a, li {
+	color: #666;		/* 링크 텍스트 색상 */
+	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+
+/*コンテナー（サイト全体を囲むブロック）
+---------------------------------------------------------------------------*/
+
+
+/* ---------------------------------------- 메뉴바 전체 ----------------------------------------*/
+header {   
+	overflow: auto;
+	width: 180px;
+	height: 100%;
+	float: left;	
+	position: fixed;
+	transition: left 0.3s ease;
+	text-align: center;
+}
+
+#logo2 {  /* 로고 버튼 (애니메이션 추가되어 있음 */
+	border-style: none;  /* 버튼 주위의 선 제거 */
+	background: none;    /* 버튼 배경색 제거 */
+	position: fixed;
+    top: 30px;           /* 버튼의 상단 여백 */
+    left: 30px;          /* 버튼의 왼쪽 여백 */
+    z-index: 9999;       /* 레이아웃 맨 위로 */
+	transition: left 0.3s ease;
+}
+
+#logo2 :hover {
+	width: 140px;
+	height: 140px;
+	transform: translate(-10%, -10%); /*중심으로 확대/축소 */
+	transform-origin: center center; /* 중심점 지정 */
+}
+
+#menubar {
+	margin-top: 90%;
+	font-size: 18px;
+	text-align: center;
+	width: 65%;
+	display: inline-block;
+}
+
+.menu-a{   /* 메뉴바 텍스트 부분 */
+	text-align: center;
+	border-radius: 50%;
+	height: 100px;
+
+	display: flex; /* 내부 내용을 가운데 정렬하기 위해 Flexbox 사용 */
+  	align-items: center; /* 내부 내용을 세로로 가운데 정렬 */
+  	justify-content: center; /* 내부 내용을 가로로 가운데 정렬 */
+  	text-align: center; /* 내부 텍스트 가운데 정렬 */
+}
+
+#menubar hr {
+	width: 100%;
+	border-color: rgb(190, 171, 0);
+	border-top: 2px;
+	margin: 14px 0 14px 0;
+}
+
+/* 메뉴 하나하나 */
+#menubar a {
+	text-decoration: none;  /*하이퍼링크 밑줄 제거*/
+	color: #383838;
+}
+
+/* 메뉴바 작은 글자 */
+#menubar li span:last-child {
+	display: block;
+	font-size: 12px;
+	color: #927f15;		/*文字色*/
+}
+
+#menubar li:hover {
+	background: #fafafa;
+}
+
+
+/*スマホ用メニューを表示させない*/
+#menubar-s {display: none;text-indent: -9999px;}
+/*３本バーアイコンを表示させない*/
+#menubar_hdr {display: none;}
+
+
+
+/*mainコンテンツ
+---------------------------------------------------------------------------*/
+/*mainブロック*/
+#main {
+	animation-name: opa2;		/*keyframes.cssで使う@keyframesの指定*/
+	animation-fill-mode: both;
+	animation-duration: 0.3S;	/*アニメーションを実行する時間。「s」は秒の事。*/
+	animation-delay: 0.5s;		/*出現するタイミング（秒後）*/
+	position: relative;
+
+	height: 100%;
+	margin-left: 180px;
+	padding: 0 8% 0 8%;
+	transition: left 0.3s ease;
+}
+/*メインコンテンツのh2タグ設定*/
+#main h2 {
+	clear: both;
+	color: #EEBA00;	/*文字色*/
+	margin-bottom: 20px;	/*見出しの下に空けるスペース*/
+	padding: 0 20px 0;	/*上、左右、下へのタグ内の余白*/
+	font-size: 26px;		/*文字サイズ*/
+	background: url(../images/line1.png) repeat-x left bottom / 300px;	/*下線の画像の読み込み*/
+	text-align: center;	/*テキストをセンタリング*/
+}
+/*メインコンテンツのh3タグ設定*/
+#main h3 {
+	clear: both;
+	color: #000000;	/*文字色*/
+	font-size: 30px;		/*文字サイズ*/
+}
+#main h4 {
+	color: #000000;
+    font-size: 22px;
+    line-height: normal;
+}
+/*mainコンテンツの段落タグ設定*/
+#main p {
+	color: #000000;
+    font-size: 21px;
+    line-height: normal;
+}
+
+.total {
+    padding-top: 18%;
+}
+
+.bottom {
+    margin-bottom: 1%;
+}
+
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+/*デフォルトでは非表示に*/
+body .nav-fix-pos-pagetop a {display: none;}
+/*ボタンの設定*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	display: block;text-decoration: none;text-align: center;z-index: 99;position: fixed;
+	width: 100px;		/*幅*/
+	bottom: 30px;		/*下からの配置場所指定*/
+	right: 1%;			/*右からの配置場所指定*/
+	animation-name: opa1;	/*keyframes.cssで使う@keyframesの指定*/
+	animation-duration: 1S;		/*アニメーションの実行時間*/
+	animation-fill-mode: forwards;	/*アニメーションの完了後、最後のキーフレームを維持する*/
+}
+/*通常時の透明度。70%色を出す。*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop img {
+	opacity: 0.7;
+}
+/*マウスオン時の透明度。100%色を出す。*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop img:hover {
+	opacity: 1;
+}
+
+/*check
+---------------------------------------------------------------------------*/
+p.check {
+	background: #ff0000;
+	color:#fff;
+	padding: 10px 25px !important;
+	margin-bottom: 20px;
+}
+p.check a {color: #fff;}
+
+
+/*画面幅900px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:900px){
+
+body {
+	font-size: 13px;
+}
+
+header {
+	float: none;
+	position: static;
+	height: auto;
+}
+
+#logo2 {  /* 로고 버튼 (애니메이션 추가되어 있음 */
+	display: none;
+}
+
+#main p {
+	font-size: 20px;
+}
+
+#main h3 {
+	font-size: 27px;		/*文字サイズ*/
+}
+
+#main {
+	float: none;
+	width: auto;
+}
+
+/*スマホ用メニューブロック*/
+#menubar-s {
+	display: block;text-indent: inherit;
+	animation-name: opa1;		/*keyframes.cssで使う@keyframesの指定*/
+	animation-duration: 1S;		/*アニメーションの実行時間*/
+	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
+	background: rgba(0,0,0,0.85);	/*背景色。0,0,0は黒の事で、0.85は色が85%出た状態の事。*/
+	position: fixed;overflow: auto;z-index: 100;
+	left: 0px;
+	top: 0px;
+	width: 100%;		/*幅。上のpaddingと合わせて100%になるように。*/
+	height: 100%;	/*高さ。上のpaddingと合わせて100%になるように。*/
+	text-align: center;	/*テキストをセンタリング*/
+	font-size: 20px;
+}
+#menubar-s > ul {
+	margin-top: 100px;	/*メニューの上側にあける余白*/
+}
+/*メニュー１個あたりの設定*/
+#menubar-s li a {
+	text-decoration: none;display: block;
+	color: #fff;
+	padding-bottom: 30px;
+}
+/*小文字の指定（最後のspanタグ）*/
+#menubar-s li span:last-child {
+	display: block;
+	font-size: 11px;	/*文字サイズ*/
+}
+/*PC用メニューを非表示にする*/
+#menubar {display: none;}
+
+/*３本バーアイコン設定
+---------------------------------------------------------------------------*/
+/*３本バーブロック*/
+#menubar_hdr {
+	display: block;
+	position: fixed;
+	z-index: 100;
+	top: 20px;	/*上からの配置場所指定*/
+	left: 3%;	/*右からの配置場所指定*/
+	border: 1px solid #fff;	/*枠線の幅、線種、色*/
+}
+
+/*アイコン共通設定*/
+#menubar_hdr.close,
+#menubar_hdr.open {
+	width: 50px;	/*幅*/
+	height: 50px;	/*高さ*/
+	border-radius: 50%;
+}
+/*三本バーアイコン*/
+#menubar_hdr.close {
+	background: #EEBA00 url(../images/icon_menu.png) no-repeat center top/50px;
+}
+/*閉じるアイコン*/
+#menubar_hdr.open {
+	background: #EEBA00 url(../images/icon_menu.png) no-repeat center bottom/50px;
+}
+}
+
+
+/*画面幅600px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:600px){
+
+header {
+	width: 0;
+}
+
+#main p {
+	font-size: 18px;
+}
+
+#main h3 {
+	font-size: 22;
+}
+
+/*PAGE TOP（↑）設定
+	---------------------------------------------------------------------------*/
+/*ボタンの設定*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	width: 70px;		/*幅を少し小さくリサイズする*/
+}
+
+}

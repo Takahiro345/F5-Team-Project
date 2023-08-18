@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>introduce Team</title>
+<style>
+
+.member-image {
+    width: 20%;
+    height: 20%;
+  }
+  .member {
+    display: flex; /* flexbox 적용 */
+    align-items: center;
+  }
+
+  .member-text {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .total {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  #group-image {
+    width: 43%;
+    height: auto;
+    margin-right: 3%;
+    border-radius: 20px;
+  }
+
+  .teg {
+    color: #57a1cf;
+    margin-right: 8px;
+    line-height: normal;
+  }
+
+  .member-left {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 14%;
+  }
+  .member-right {
+    float: right;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14%;
+  }
+  .member-right .setumei {
+    text-align: left;
+  }
+
+  #Line {
+    margin: -20px 0 16% 0;
+  }
+
+  @media screen and (max-width:900px){
+
+    #group-image {
+      min-width: 70%;
+      border-radius: 20px;
+      margin: 0 0 20px 0;
+    }
+
+    .member-text {
+      width: 80%;
+      margin: 0;
+      text-align: center;
+    }
+
+    #Line {
+      margin: -10px 0 16% 0;
+    }
+
+    .member-left, .member-right {     
+      flex-direction: column;
+      align-items: center;
+  	  justify-content: center;
+  	  text-align: center;
+    }
+
+    .member-image {
+      width: 50%;
+    }
+
+    .member-right img {
+      order: -1;
+    }
+
+    #main h3 {
+      margin-top: 1%;
+    }
+
+    .bottom {
+      margin-bottom: 2%;
+    }
+
+  } 
+
+  @media screen and (max-width:600px){
+
+    #group-image {
+      width: 85%;
+    }
+
+  } 
+
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="bg2">
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<button id="logo2"><img src="images/logo1.png" alt="" width="110px" height="110px"></button>
+
+<header id="header" style="background-color: #FFD000;">
+  <!--PC用（901px以上端末）メニュー-->
+
+  <nav id="menubar">
+      <ul>
+        <li class="menu-a"><a href="Home.html"><span>Home</span><span></span></a></li> <hr>
+        <li id="Team" class="menu-a"><a href="Team.html"><span>Team</span><span>紹介</span></a></li> <hr>
+        <li id="I1" class="menu-a"><a href="Interview1.html"><span>Interview 1</span><span>納 由貴子 様</span></a></li> <hr>
+        <li id="I2" class="menu-a"><a href="Interview2.html"><span>Interview 2</span><span>キム・ミンジュン 様</span></a></li> <hr>
+        <li id="Photo" class="menu-a"><a href="Photo.html"><span>Photo</span><span></span></a></li>
+      </ul>
+  </nav>
+
+  
+  <!--小さな端末用（900px以下端末）ブロック-->
+  <nav id="menubar-s">
+    <ul>
+      <li><a href="Home.html"><span>Home</span><span></span></a></li>
+      <li><a href="Team.html"><span>Team</span><span>紹介</span></a></li>
+      <li><a href="Interview1.html"><span>Interview 1</span><span>納 由貴子 様</span></a></li>
+      <li><a href="Interview2.html"><span>Interview 2</span><span>キム・ミンジュン 様</span></a></li>
+      <li><a href="Photo.html"><span>Photo</span><span></span></a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<div id="main">
+
+  <div class="total">
+
+  <!-- 팀 --->
+  <div class="member-left">
+    <img id="group-image" src="images/단체사진1.jpg" alt="">
+    <div class="member-text">
+      <p class="bottom">          
+        <span class="teg">#青海進</span><span class="teg">#IT</span><span class="teg">#プロジェクト</span>
+        <br>
+        <span class="teg">#チーム名</span><span class="teg">#F5</span>
+      </p>
+      <p class="setumei">
+        チームメンバー全員のMBTIにFが入っていて、 キーボードの
+        「F5」みたいに、常に新しい事を受け入れられる
+      </p>
+      <p style="font-size: 17px; margin-top: 2%; color: rgb(54, 54, 54);">※MBTIは性格診断の一つで、Fは感情型の特性が含まれることを表す</p>
+      <br>
+      <p class="bottom">          
+        <span class="teg">#テーマ名</span><br>
+        <span class="teg">#私達の海外生活を充実させるための基盤作り</span>
+      </p>
+      <p class="setumei">
+        不安や気にしていることを共有した時、「外国での生活に上手く適応していけるのか」
+        という意見が多かった。そこで、海外で働いている人へのインタビューを通じて 
+        海外での経験やアドバイスを聞き、それを自分達のヒントにしたい
+      </p>             
+    </div>         
+  </div>
+
+  <h3 style="text-align: center; margin: 8% 0 0 0;">チームメンバー 紹介</h3>
+  <img id="Line" src="images/skyblue.png" alt="Line">
+
+  <!-- 권기성 --->
+  <div class="member-right">          
+    <div class="member-text">
+      <h3>クォン・ギソン</h3>
+      <p class="bottom">
+        <span class="teg">#インタビュー１ページ</span><span class="teg">#日本語学部</span>
+        <br>
+        <span class="teg">#リーダーシップ</span><span class="teg">#前向き</span><span class="teg">#思いやり</span>
+      </p>
+      <p class="setumei">
+        IT初心者で、大変だったんですが、チームメンバーと協力し、無事にプロジェクトを終えることができました。
+        自分達が考えた内容を形に出来た時、達成感を感じて嬉しかったです。
+        今後も仲間と協力し合うことで、一緒に成長していけるよう頑張りたいと思います。
+      </p>
+    </div>
+    <img src="images/팀/GU.png" class="member-image" alt="">
+  </div>
+
+  <!-- 성명인 --->
+  <div class="member-left">
+    <img src="images/팀/SE.png" class="member-image" alt="">
+    <div class="member-text">
+      <h3>ソン・ミョンイン</h3>
+      <p class="bottom">          
+        <span class="teg">#メインページ</span><span class="teg">#ページ機能作り</span>
+        <br>
+        <span class="teg">#日本語学部</span><span class="teg">#万能</span><span class="teg">#趣味</span><span class="teg">#麻雀</span>
+      </p>
+      <p class="setumei">
+        初めてITプロジェクトをしましたが、チームメンバー全員が親切で情熱的だったので、チーム活動をする間ずっと楽しかったです。
+        私が修正したコードがリアルタイムで適用され、BEFORE/AFTERを見るのも面白かったです。
+        また、分からない部分を何時間もかけて解決した時のやりがいは最高でした。
+        今回のプロジェクトを通じて、プログラマーという職業を選んだことに再び確信を得ました。
+      </p>             
+    </div>          
+  </div>
+
+  <!-- 송지석 --->
+  <div class="member-right">        
+    <div class="member-text">
+      <h3>ソン・ジソク</h3>
+      <p class="bottom">
+        <span class="teg">#フォトページ</span><span class="teg">#フォトショップ</span>
+        <br>
+        <span class="teg">#ミャンマー学科</span><span class="teg">#チャレンジ精神</span>
+      </p>
+      <p class="setumei">
+        日本語のインタビューは初めてで大変でしたが、チームメンバーと一緒に行ったので楽しかったです。そして、インタビューのためにビジネスメールを
+        送ったりインタビューの事前準備をする過程を含め、直接行ったインタビューは私にとって貴重な経験でした。これからもこの経験を生かして、楽しく真面目に頑張ります。
+      </p> 
+    </div>
+      <img src="images/팀/SO.png" class="member-image" alt="">
+  </div>
+  
+  <!-- 구진홍 ---> 
+  <div class="member-left">
+    <img src="images/팀/KU.png" class="member-image" alt="">
+    <div class="member-text">
+      <h3>ク・ジンホン</h3>
+      <p class="bottom">
+        <span class="teg">#インタビュー２ページ</span><span class="teg">#日本語学部</span>
+        <br>
+        <span class="teg">#活発</span><span class="teg">#粘り強い</span><span class="teg">#メモを取る習慣</span>
+        <br>
+      </p>
+      <p class="setumei">
+        インタビューをする前に質問リストを考えておきましたが、実際にインタビューをしてみると時間が余ってしまい、
+        そういうところでまだ経験が足りないと感じました。そこで、感じたこととインタビューで
+        聞いた話しをもとに、これからもっと成長していけるように頑張りたいと思いました。
+      </p>
+    </div>          
+  </div>
+
+  <!-- 이가은 --->
+  <div class="member-right">
+    
+    <div class="member-text">
+      <h3>イ・ガウン</h3>
+      <p class="bottom">
+        <span class="teg">#デザイン</span><span class="teg">#チームページ</span>
+        <br>
+        <span class="teg">#日本語学部</span><span class="teg">#真面目</span><span class="teg">#編み物好き</span>
+        <br>
+      </p>
+      <p class="setumei">
+        チームプロジェクトが初めてで、チームメンバーみんなで意見を出して、それを合わせながら
+        整理することが少し難しかったです。でも、みんなで頑張りながらだんだん完成
+        させていくことが楽しくて、その過程が魅力的だと感じました。学校での一日
+        6時間もの授業が一瞬に過ぎたと思うぐらい集中して作業したので、満足できる
+        結果を出すことができたと思います。
+      </p>
+    </div>
+    <img src="images/팀/LE.png" class="member-image" alt="">
+  </div>
+
+  <img src="images/skyblue.png" alt="Line" style="margin-bottom: 5%;">
+
+  </div>
+
+</div>
+<!--/#main-->
+
+</div>
+<!--/#container-->
+
+<!--ページの上部に戻るボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#"><img src="images/icon_pagetop.png" alt="↑" style="width: 80%;"></a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+
+<!--メニューの開閉処理-->
+<script>
+open_close("menubar_hdr", "menubar-s");
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
